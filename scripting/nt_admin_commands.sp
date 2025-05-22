@@ -11,7 +11,7 @@ public Plugin myinfo = {
 	name = "NT admin commands",
 	description = "Extra functionality for admins and server operators",
 	author = "bauxite",
-	version = "0.1.1",
+	version = "0.1.2",
 	url = "",
 };
 
@@ -63,7 +63,7 @@ public Action Cmd_Camera(int client, int args)
 	
 	g_cvCamera.BoolValue = !state;
 	
-	ReplyToCommand(client, "%s Death camera was %s", g_tag, !state ? "Enabled":"Disabled");
+	ReplyToCommand(client, "%s Death camera was %s", g_tag, state ? "Enabled":"Disabled");
 	
 	return Plugin_Handled;
 }
